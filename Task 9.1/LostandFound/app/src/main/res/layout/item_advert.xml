@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="?attr/materialCardViewElevatedStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp">
+
+        <TextView
+            android:id="@+id/text_view_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/zilla_slab_bold"
+            android:gravity="center"
+            android:textSize="28sp"
+            android:breakStrategy="balanced"
+            android:hyphenationFrequency="full"
+            app:layout_constraintBottom_toTopOf="@id/text_view_date"
+            app:layout_constraintEnd_toStartOf="@id/material_divider_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Apple AirPods" />
+
+        <FrameLayout
+            android:id="@+id/material_divider_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/text_view_description"
+            app:layout_constraintStart_toEndOf="@id/text_view_date"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/material_divider"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="8dp" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/text_view_description"
+            android:layout_width="240dp"
+            android:layout_height="170dp"
+            android:layout_marginEnd="4dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter"
+            android:maxLines="10"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/material_divider_layout"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent per." />
+
+        <TextView
+            android:id="@+id/text_view_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/inter_light"
+            android:gravity="center"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/text_view_post_type"
+            app:layout_constraintEnd_toEndOf="@id/text_view_title"
+            app:layout_constraintStart_toStartOf="@id/text_view_title"
+            app:layout_constraintTop_toBottomOf="@id/text_view_title"
+            tools:text="29/05/1998" />
+
+        <TextView
+            android:id="@+id/text_view_post_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginBottom="6dp"
+            android:fontFamily="@font/inter_semibold"
+            android:gravity="center"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/text_view_date"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/material_divider_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="LOST" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
